@@ -1,8 +1,7 @@
-## ---- library_calls ----
+## ---- simulate_function ----
 library(tidyverse)
 library(magrittr)
 
-## ---- simulate_function ----
 monty_hall_sim <- function (door, switch) {
   doors <- c('a', 'b', 'c')
   prize <- sample(doors, size = 1)
