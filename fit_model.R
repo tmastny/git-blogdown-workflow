@@ -1,11 +1,8 @@
 ## ---- library_call ----
 library(tidyverse)
 
-## ---- read_data_1 ----
+## ---- read_data ----
 d <- read_csv(file = 'tidied_periodization.csv')
-
-## ---- read_data_2 ----
-d <- read_csv(file = here::here('tidied_periodization.csv'))
 
 ## ---- fit_model ----
 m <- lm(post ~ pre, data = d)
