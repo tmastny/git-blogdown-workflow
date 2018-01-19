@@ -11,7 +11,7 @@ d <- read_csv(file = here::here('tidied_periodization.csv'))
 m <- lm(post ~ pre, data = d)
 
 ## ---- save_fit ----
-saveRDS(m, file = 'saved_model')
+saveRDS(m, file = 'saved_model.rds')
 
 ## ---- plot_model ----
 d %>%
