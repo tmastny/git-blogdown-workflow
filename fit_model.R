@@ -1,10 +1,10 @@
 ## ---- library_call ----
 library(tidyverse)
 
-## ---- read_data_error ----
+## ---- read_data_1 ----
 d <- read_csv(file = 'tidied_periodization.csv')
 
-## ---- read_data_good ----
+## ---- read_data_2 ----
 d <- read_csv(file = here::here('tidied_periodization.csv'))
 
 ## ---- fit_model ----
