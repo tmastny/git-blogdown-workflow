@@ -23,7 +23,7 @@ d %<>%
 ## ---- plot_results ----
 d %>%
   group_by(switch) %>%
-  rowid_to_column(var = 'attempt') %>%
+  mutate(attempt = row_number()) %>%
   mutate(success_ratio = cumsum(prize)/attempt) %>%
   ungroup() %>%
   ggplot() +
