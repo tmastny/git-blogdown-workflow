@@ -23,9 +23,9 @@ d %<>%
 ## ---- plot_results ----
 d %>%
   group_by(switch) %>%
-  mutate(success_ratio = cumsum(prize)/n()) %>%
-  ungroup() %>%
   rowid_to_column(var = 'attempt') %>%
+  mutate(success_ratio = cumsum(prize)/attempt) %>%
+  ungroup() %>%
   ggplot() +
   geom_line(aes(x = attempt, y = success_ratio, color = switch))
 
