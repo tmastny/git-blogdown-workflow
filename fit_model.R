@@ -18,4 +18,3 @@ d %>%
   geom_line(aes(y = pred)) + 
   xlim(0, 420) + ylim(0, 500)
   
-  
